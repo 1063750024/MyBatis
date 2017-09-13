@@ -12,6 +12,19 @@ MyBatis：是一个持久层的框架！ 它内部封装了jdbc技术！
    前身：ibatis！ 我们使用mybatis的时候，底层的包 还叫ibatis！
       2013年源码上传了github
 
+
+Hibernate是一个持久层全自动的ORM框架！
+可以不写sql语句，我们按照面向对象的思想来解决数据库中的问题！
+
+
+Mybatis:持久层半自动的ORM框架！支持定制化sql！
+ibatis的前身！
+
+
+中文网址：http://www.mybatis.org/mybatis-3/zh/index.html
+
+github源码：https://github.com/mybatis/mybatis-3/tree/master/src/main/java/org/apache/ibatis
+
  和Hibernate一样 都是 持久层的框架！
 
  Hibernate是一个ORM映射的持久层的框架！
@@ -71,15 +84,47 @@ response 返回时，就可以把 SqlSession 关闭。关闭会话是非常重�
 
 
 
+使用Idea 开发第一个myBatis项目
+01.创建maven项目
+02.配置 pom文件  引入需要的jar
+03.在src目录下的main下 创建 source文件  并把文件设置成 resouce文件
+04.从文档中copy 核心配置文件 进行书写
+    001.jdbc.properties
+    002.sql语句所在的mapper.xml文件
+    003.mapper.xml文件必须放在resource文件夹中
+05.创建我们的接口 书写方法
+06.创建需要的实体类 以及mapper.xml文件
+    需要注意的是mapper.xml文件的根节点是 mapper 需要一个属性叫namespace
+07.书写测试类 运行
 
-Hibernate是一个持久层全自动的ORM框架！
-可以不写sql语句，我们按照面向对象的思想来解决数据库中的问题！
 
 
-Mybatis:持久层半自动的ORM框架！支持定制化sql！
-ibatis的前身！
 
 
-中文网址：http://www.mybatis.org/mybatis-3/zh/index.html
 
-github源码：https://github.com/mybatis/mybatis-3/tree/master/src/main/java/org/apache/ibatis
+
+
+需要的sql脚本
+
+
+DROP TABLE IF EXISTS `student`;
+CREATE TABLE `student` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) DEFAULT NULL,
+  `age` int(4) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

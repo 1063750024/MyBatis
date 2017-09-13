@@ -1,12 +1,11 @@
-package com.xdf.test;
+package com.xdf;
 
 import com.xdf.bean.Student;
 import com.xdf.dao.StudentDao;
 import com.xdf.dao.StudentDaoImpl;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class StudentTest {
-
 
     /**
      * 新增学生信息到数据库
@@ -14,6 +13,6 @@ public class StudentTest {
     @Test
     public   void  testAddStudent(){
         StudentDao dao=new StudentDaoImpl();
-        dao.addStudent(new Student(11,"小白"));
+        dao.addStudent(new Student(12,"小白2"));
     }
 }

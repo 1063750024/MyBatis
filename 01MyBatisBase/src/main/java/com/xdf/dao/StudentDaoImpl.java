@@ -20,6 +20,32 @@ public class StudentDaoImpl implements  StudentDao{
             /**
              * 参数1：是我们执行的sql语句id
              * 参数2：如果方法是带参的  需要执行这个参数
+             * 注意点：
+             *    01.底层没有insert，delete 只有update
+             *       001.点击insert观看源码
+             *               新增操作
+             *               public int insert(String statement, Object parameter) {
+                             return this.update(statement, parameter);
+                             }
+                             删除方法
+                             public int delete(String statement) {
+                             return this.update(statement, (Object)null);
+                             }
+                    002.最终执行的是update！你怎么知道我到达执行的是新增还是删除呢？？？点进去update
+                         001.根据mapper.xml文件中的sql语句！
+                         002.只有sql语句  就能更新到数据库吗？
+                         003.底层有一个属性叫dirty  是否是脏数据
+
+
+
+
+
+
+
+
+
+
+             *
              */
             session.insert("addStudent",student);
             //手动提交事务
