@@ -36,15 +36,9 @@ public class StudentDaoImpl implements  StudentDao{
                          002.只有sql语句  就能更新到数据库吗？
                          003.底层有一个属性叫dirty  是否是脏数据
 
-
-
-
-
-
-
-
-
-
+                     session.commit()执行的时候，会进行缓存清理和flush（）操作！
+                     缓存清理的时候会判断我们的对象是否是脏对象！如果是脏对象就会进行
+                     同步数据库的操作！之后再把dirty 属性变为false！
              *
              */
             session.insert("addStudent",student);
