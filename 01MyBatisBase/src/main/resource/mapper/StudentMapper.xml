@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper>
+<mapper namespace="com.xdf.dao">
     <!--新增操作   id必须和StudentDao中的方法名称一致-->
     <insert id="addStudent" parameterType="com.xdf.bean.Student">
         /*因为我们的参数是Student对象   所以 values中的值 必须是Student类中的属性*/

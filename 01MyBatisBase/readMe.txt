@@ -33,12 +33,6 @@ MyBatis：是一个持久层的框架！ 它内部封装了jdbc技术！
 
 
 
-
-
-
-
-
-
 SqlSessionFactoryBuilder
 01.加载核心配置文件！
 02. 作用域放在方法体内！
@@ -51,7 +45,7 @@ SqlSessionFactoryBuilder
 
 
 
-SqlSessionFactory ：
+SqlSessionFactory
 01.SqlSession的会话工厂
 02.在整个应用程序中  只存在一个对象即可！  单例！
 

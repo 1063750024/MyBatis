@@ -8,6 +8,11 @@ public class Student {
     private  int age;
     private  String name;
 
+    public Student(int age, String name) {
+        this.age = age;
+        this.name = name;
+    }
+
     /**
      * 快捷生成 set和get  以及有参无参构造和toString  alt+insert
      */
