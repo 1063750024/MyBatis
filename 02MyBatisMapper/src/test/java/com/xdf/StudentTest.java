@@ -97,8 +97,8 @@ public class StudentTest {
      */
     @Test
     public void mapStudent(){
-        Map<String, Object> student = dao.selectAllByMap();
-        log.debug(student);
+        List<Map<String,Object>> maps = dao.selectAllByMap();
+        log.debug(maps);
     }
     /**
      * 查询指定的student 返回Student对象
