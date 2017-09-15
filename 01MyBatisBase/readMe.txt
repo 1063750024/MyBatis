@@ -1,8 +1,7 @@
 
 框架：  io        多线程   网络编程
        数据库     jdbc     servlet
-
- 持久化技术：   io   序列化     数据库
+持久化技术：   io   序列化     数据库
 
 MyBatis：是一个持久层的框架！ 它内部封装了jdbc技术！
           我们只关注sql语句的书写！
@@ -13,11 +12,11 @@ MyBatis：是一个持久层的框架！ 它内部封装了jdbc技术！
       2013年源码上传了github
 
 
-Hibernate是一个持久层全自动的ORM框架！
+Hibernate是一个持久层全自动的ORM框架！     实体类的映射
 可以不写sql语句，我们按照面向对象的思想来解决数据库中的问题！
 
 
-Mybatis:持久层半自动的ORM框架！支持定制化sql！
+Mybatis:持久层半自动的ORM框架！支持定制化sql！   sql语句的映射
 ibatis的前身！
 
 

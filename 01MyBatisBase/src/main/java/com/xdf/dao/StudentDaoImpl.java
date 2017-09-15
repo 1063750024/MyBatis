@@ -4,10 +4,15 @@ import com.xdf.bean.Student;
 import com.xdf.util.SessionFactoryUtil;
 import org.apache.ibatis.session.SqlSession;
 
+import java.io.Serializable;
+import java.util.List;
+import java.util.Map;
+
 /**
  * alt +enter  快速实现方法
  */
 public class StudentDaoImpl implements  StudentDao{
+
 
     /**
      * @param student  需要新增的学生对象
@@ -52,4 +57,92 @@ public class StudentDaoImpl implements  StudentDao{
         }
 
     }
+
+    /**
+     * 删除
+     *
+     * @param id
+     */
+    public void deleteStudent(Serializable id) {
+
+        //获取session
+        SqlSession session = null;
+        try {
+            session = SessionFactoryUtil.getSession();
+            //删除操作
+            session.delete("deleteStudent",id);
+            session.commit();
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            session.close();
+        }
+
+
+    }
+
+    /**
+     * 修改
+     *
+     * @param student
+     */
+    public void updateStudent(Student student) {
+        //获取session
+        SqlSession session = null;
+        try {
+            session = SessionFactoryUtil.getSession();
+            //修改操作
+            session.update("updateStudent",student);
+            session.commit();
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            session.close();
+        }
+    }
+
+    /**
+     * 查询所有
+     */
+    public List<Student> selectAllStudents() {
+        //获取session
+        SqlSession session = null;
+        List<Student> students=null;
+        try {
+            session = SessionFactoryUtil.getSession();
+            //查询所有操作
+            students = session.selectList("selectAllStudents");
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            session.close();
+        }
+        return  students;
+    }
+
+    /**
+     * 查询所有返回map集合
+     */
+    public Map<String, Object> selectAllByMap() {
+        return null;
+    }
+
+    /**
+     * 查询指定id的学生
+     *
+     * @param id
+     */
+    public Student selectStudentById(Serializable id) {
+        return null;
+    }
+
+    /**
+     * 根据姓名模糊查询
+     *
+     * @param name
+     */
+    public List<Student> selectByName(String name) {
+        return null;
+    }
+
 }
