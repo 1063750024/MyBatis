@@ -12,6 +12,10 @@ public interface StudentDao {
      *   新增
      */
     void  addStudent(Student student);
+    /**
+     *   新增
+     */
+    void  addStudentByCache(Student student);
 
     /**
      * 删除

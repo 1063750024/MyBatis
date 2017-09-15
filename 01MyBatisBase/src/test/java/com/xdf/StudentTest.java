@@ -29,8 +29,37 @@ public class StudentTest {
 
     @Test
     public   void  testAddStudent(){
-        dao.addStudent(new Student(13,"小白3"));
+        Student student=new Student(55,"嘿嘿");
+        log.debug("insert之前学生的编号："+student.getId());
+        dao.addStudent(student);
+        /**
+         * 我们现在的新增对象中 只有age和name
+         * id是mysql数据库给我们生成的
+         * 你没有去mysql数据库中查询！
+         * id肯定沒值！
+         */
+        log.debug("insert之后学生的编号："+student.getId());
     }
+
+    /**
+     * 我们需要新增对象之后，接着对这个对象进行操作
+     * 上面的新增方法能实现吗？
+     * 怎么办？
+     * 有一种方式 是在insert节点中新增一个selectkey节点
+     * 在我们新增完对象之后，连接没有立即放回连接池中，
+     * 而是接着查询数据库中 刚刚插入数据的id
+     * 这样id我们就能获取了！
+     */
+    @Test
+    public   void  addStudentByCache(){
+        Student student=new Student(56,"嘿嘿666");
+        log.debug("insert之前学生的编号："+student.getId());
+        dao.addStudentByCache(student);
+        log.debug("insert之后学生的编号："+student.getId()); //就会有值
+    }
+
+
+
 
     /**
      * 删除

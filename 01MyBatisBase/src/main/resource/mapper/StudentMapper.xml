@@ -8,6 +8,19 @@
         /*因为我们的参数是Student对象   所以 values中的值 必须是Student类中的属性*/
         INSERT  INTO  student(age,name)  VALUES (#{age},#{name})
     </insert>
+    <!--新增操作  会获取我们插入数据的id
+    SELECT @@identity
+    SELECT LAST_INSERT_ID()    查询刚插入数据的主键
+    -->
+    <insert id="addStudentByCache" parameterType="Student">
+        INSERT  INTO  student(age,name)  VALUES (#{age},#{name})
+        /* order="AFTER" 适用于mysql数据库
+          order="BEFORE" 适用于oracle数据库
+          */
+        <selectKey resultType="int" keyProperty="id" order="AFTER">
+            SELECT  @@IDENTITY
+        </selectKey>
+    </insert>
 
     <!--删除操作  传递一个id不是一个对象 所以我们在sql语句中就可以用占位符-->
     <delete id="deleteStudent" parameterType="int">

@@ -59,6 +59,25 @@ public class StudentDaoImpl implements  StudentDao{
     }
 
     /**
+     * 新增  并且获取新增对象的id
+     */
+    public void addStudentByCache(Student student) {
+        //获取session
+        SqlSession session = null;
+        try {
+            session= SessionFactoryUtil.getSession();
+            session.insert("addStudentByCache",student);
+            //手动提交事务
+            session.commit();
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            //务必要关闭session
+            session.close();
+        }
+    }
+
+    /**
      * 删除
      *
      * @param id
