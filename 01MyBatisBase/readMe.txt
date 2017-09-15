@@ -117,7 +117,24 @@ CREATE TABLE `student` (
 
 
 
+# 和 $的区别
 
+01.$ 不安全 底层实现是statement对象
+
+    select * from student  where id=${id}
+    如果我们id传入的是11    编译之后
+    select * from student  where id=11
+
+
+   # 安全   底层实现是PreparedStatement对象
+    select * from student  where id=#{id}
+    如果我们id传入的是11    编译之后
+    select * from student  where id=?
+
+02.在sql语句需要排序的时候
+     order  by  ${id}
+     只有在需要排序的时候 使用$ .
+     其他时候能用#绝对不用$
 
 
 
