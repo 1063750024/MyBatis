@@ -124,7 +124,22 @@ public class StudentDaoImpl implements  StudentDao{
      * 查询所有返回map集合
      */
     public Map<String, Object> selectAllByMap() {
-        return null;
+        //获取session
+        SqlSession session = null;
+        Map<String, Object> students=null;
+        try {
+            session = SessionFactoryUtil.getSession();
+            /**
+             *  查询所有操作 返回map
+             *     s1: map集合中的key
+             */
+            students= session.selectMap("selectAllByMap","name");
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            session.close();
+        }
+        return  students;
     }
 
     /**
@@ -133,7 +148,18 @@ public class StudentDaoImpl implements  StudentDao{
      * @param id
      */
     public Student selectStudentById(Serializable id) {
-        return null;
+        //获取session
+        SqlSession session = null;
+        Student student=null;
+        try {
+            session = SessionFactoryUtil.getSession();
+            student= session.selectOne("selectStudentById",id);
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            session.close();
+        }
+        return  student;
     }
 
     /**
@@ -142,7 +168,19 @@ public class StudentDaoImpl implements  StudentDao{
      * @param name
      */
     public List<Student> selectByName(String name) {
-        return null;
+        //获取session
+        SqlSession session = null;
+        List<Student> students=null;
+        try {
+            session = SessionFactoryUtil.getSession();
+            //查询所有操作
+            students = session.selectList("selectByName",name);
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            session.close();
+        }
+        return  students;
     }
 
 }

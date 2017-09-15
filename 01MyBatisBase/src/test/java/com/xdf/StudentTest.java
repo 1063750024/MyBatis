@@ -8,6 +8,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.List;
+import java.util.Map;
 
 public class StudentTest {
 
@@ -53,6 +54,34 @@ public class StudentTest {
     public void listStudent(){
         List<Student> students = dao.selectAllStudents();
         log.debug(students);
+    }
+    /**
+     * 查询所有 返回map
+     */
+    @Test
+    public void mapStudent(){
+        Map<String, Object> students = dao.selectAllByMap();
+        log.debug(students.size());
+        //根据key获取一个对象
+       log.debug(students.get("小尼古拉斯"));
+    }
+    /**
+     * 查询指定的student 返回Student对象
+     */
+    @Test
+    public void selectStudentById(){
+        Student student = dao.selectStudentById(14);
+        //获取一个对象
+       log.debug(student);
+    }
+    /**
+     * 根据姓名模糊查询
+     */
+    @Test
+    public void selectStudentByName(){
+        List<Student> students = dao.selectByName("小");
+        //获取一个对象
+       log.debug(students);
     }
 
 }
