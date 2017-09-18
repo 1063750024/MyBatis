@@ -8,6 +8,7 @@
   <modules>
     <module>01MyBatisBase</module>
     <module>02MyBatisMapper</module>
+    <module>03MyBatisMoreCondition</module>
   </modules>
   <packaging>pom</packaging>
 
