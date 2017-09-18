@@ -9,12 +9,14 @@
         <module name="01MyBatisBase" />
         <module name="02MyBatisMapper" />
         <module name="03MyBatisMoreCondition" />
+        <module name="04MyBatisDynamic" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="01MyBatisBase" target="1.5" />
       <module name="02MyBatisMapper" target="1.5" />
       <module name="03MyBatisMoreCondition" target="1.5" />
+      <module name="04MyBatisDynamic" target="1.5" />
       <module name="MyBatis" target="1.5" />
     </bytecodeTargetLevel>
   </component>

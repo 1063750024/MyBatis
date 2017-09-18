@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xdf.dao.StudentDao"> <!--必须是对应的dao接口的全类名-->
+
+   <!-- 01.用户传递一个Student对象  但是我们不知道用户对那些属性赋了值
+      注意点  特殊字符的使用
+      && （逻辑与）  必须换成 (and) 或者 (&amp;)
+
+      where 1=1  每次拼接查询都会 执行 影响性能
+   -->
+      <select id="selectStudentsByIf" resultType="Student">
+         SELECT  id,name,age from  student  where 1=1
+         <if test="name!=null and name!=''">
+               and  name like concat('%',#{name},'%')
+         </if>
+         <if test="age &gt; 0">
+               and  age > #{age}
+         </if>
+      </select>
+
+</mapper>
