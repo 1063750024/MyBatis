@@ -1,6 +1,7 @@
 package com.xdf.dao;
 
 import com.xdf.bean.Student;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 import java.util.Map;
@@ -37,4 +38,8 @@ public interface StudentDao {
      * 06.foreach 遍历对象集合
      */
     List<Student> selectStudentsByForeachStudent(List<Student> students);
+    /**
+     * 07.foreach 遍历Map集合
+     */
+    List<Student> selectStudentsByForeachMap(@Param("myMap") Map<String,Object> map);
 }

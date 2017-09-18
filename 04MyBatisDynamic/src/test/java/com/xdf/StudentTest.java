@@ -114,5 +114,17 @@ public class StudentTest {
         List<Student> students = dao.selectStudentsByForeachStudent(list);
         log.debug(students);
     }
+    /**
+     * foreach 遍历Map集合
+     */
+    @Test
+    public  void  testMapForeach(){
+        Map<String, Object> map=new HashMap<String, Object>();
+        map.put("2","object1");
+        map.put("13","object2");
+        map.put("14","object3");
+        List<Student> students = dao.selectStudentsByForeachMap(map);
+        log.debug(students);
+    }
 
 }

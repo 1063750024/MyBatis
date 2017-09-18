@@ -108,5 +108,27 @@
         </if>
     </select>
 
+    <!--遍历 map集合
+    myMap就是我们dao层方法的@Param("myMap")
+    遍历myMap.keys 就是获取map集合中的所有key的集合
+    -->
+    <select id="selectStudentsByForeachMap" resultType="Student">
+        <include refid="seleteStudents"/>
+            where id IN
+        <if test="myMap.keys.size>0">
+            <foreach collection="myMap.keys"  item="mapKey" open="(" separator="," close=")">
+                #{mapKey}
+            </foreach>
+        </if>
+    </select>
+
+    <!--
+     sql片段：  提取mapper文件中所有的sql公共部分
+    -->
+
+    <sql id="seleteStudents">
+          SELECT  id,NAME,age FROM student
+    </sql>
+
 
 </mapper>
