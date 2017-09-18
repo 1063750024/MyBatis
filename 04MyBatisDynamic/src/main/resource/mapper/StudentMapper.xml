@@ -75,7 +75,7 @@
     02.12，13,14是动态获取的  是dao中方法的参数 int [] nums
     03.nums的每个元素 就是  12,13,14
     04.用户是不是有可能一个值都没有传入
-    05.只要是数组  mybatis中就使用array
+    05.只要是数组    在mybatis对应的值就是array
      -->
     <select id="selectStudentsByForeachArray" resultType="Student">
         SELECT  id,NAME,age FROM student
@@ -87,7 +87,7 @@
         </if>
     </select>
 
-    <!--遍历 List集合-->
+    <!--遍历 List集合  在mybatis对应的值就是list-->
     <select id="selectStudentsByForeachList" resultType="Student">
         SELECT  id,NAME,age FROM student
         <if test="list.size>0">
@@ -97,7 +97,7 @@
             </foreach>
         </if>
     </select>
-    <!--遍历 Student集合-->
+    <!--遍历 Student集合 -->
     <select id="selectStudentsByForeachStudent" resultType="Student">
         SELECT  id,NAME,age FROM student
         <if test="list.size>0">
@@ -108,7 +108,7 @@
         </if>
     </select>
 
-    <!--遍历 map集合
+    <!--遍历 map集合   map集合在mybatis中没有设置对应的值
     myMap就是我们dao层方法的@Param("myMap")
     遍历myMap.keys 就是获取map集合中的所有key的集合
     -->
