@@ -26,4 +26,29 @@
   and g.name=#{gradeName}
 
 
+第二种情况：
 
+   用户可以传递几个参数，我们在方法定义时就书写几个形参！
+
+   在接口中书写方法
+
+   List<Student> selectStduentsByCondition(String stuName,String teacherName,String gradeName);
+
+  在mapper.xml文件中书写sql
+
+ select s.name,s.id,s.age  from  student s,teacher t,grade g
+  where s.tId=t.id and s.gId=g.id
+  and s.name=#{0}   //开始使用参数的下标
+  and t.name=#{1}
+  and g.name=#{2}
+
+
+
+总结#｛｝中可以存放的内容
+
+01. 当参数是对象的时候，存放的是对象的属性
+02. 存放map时的注意点
+    001.当参数是map集合时，存放的是map的key
+    002.如果map的value是对象时，存放的是对象的属性
+03.如果传递一个参数，存放的是占位符
+04.如果传递多个参数，存放的是参数对应的下标，从0开始

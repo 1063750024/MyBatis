@@ -69,5 +69,15 @@ public class StudentTest {
        log.debug(students);
     }
 
+    @Test
+    public  void  testCondition(){
+        /**
+         * 模拟从前台获取用户的输入
+         * 小和100 都是 用户前台的输入
+         */
+        List<Student> students = dao.selectStduentsByCondition("小", 100);
+        log.debug(students);
+    }
+
 
 }

@@ -23,6 +23,12 @@
         AND  id>#{student.id}
     </select>
 
+    <!--按照参数的下标进行封装   下标从0开始-->
+    <select id="selectStduentsByCondition" resultType="Student">
+        select id,name,age from student
+        where name like  concat('%',#{0},'%')
+        and  age>#{1}
+    </select>
 
 
 </mapper>
