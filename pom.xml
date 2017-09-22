@@ -13,6 +13,7 @@
       <module>05MyBatisOneToMany</module>
       <module>06MyBatisManyToOne</module>
       <module>07MyBatisOneToManyBySelf</module>
+      <module>08MyBatisManyToOneBySelf</module>
   </modules>
   <packaging>pom</packaging>
 

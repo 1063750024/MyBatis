@@ -11,11 +11,11 @@ import org.junit.Test;
 
 import java.util.List;
 
-public class CountryTest {
+public class TeacherTest {
 
     TeacherDao dao=null;
     SqlSession session=null;
-    Logger log=Logger.getLogger(CountryTest.class);
+    Logger log=Logger.getLogger(TeacherTest.class);
 
     /**
      * 在所有的test测试方法执行之前 都要执行的操作
