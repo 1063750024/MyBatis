@@ -12,6 +12,7 @@
       <module>04MyBatisDynamic</module>
       <module>05MyBatisOneToMany</module>
       <module>06MyBatisManyToOne</module>
+      <module>07MyBatisOneToManyBySelf</module>
   </modules>
   <packaging>pom</packaging>
 

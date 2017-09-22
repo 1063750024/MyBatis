@@ -12,6 +12,7 @@
         <module name="04MyBatisDynamic" />
         <module name="05MyBatisOneToMany" />
         <module name="06MyBatisManyToOne" />
+        <module name="07MyBatisOneToManyBySelf" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -21,6 +22,7 @@
       <module name="04MyBatisDynamic" target="1.5" />
       <module name="05MyBatisOneToMany" target="1.5" />
       <module name="06MyBatisManyToOne" target="1.5" />
+      <module name="07MyBatisOneToManyBySelf" target="1.5" />
       <module name="MyBatis" target="1.5" />
     </bytecodeTargetLevel>
   </component>

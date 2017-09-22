@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/04MyBatisDynamic/04MyBatisDynamic.iml" filepath="$PROJECT_DIR$/04MyBatisDynamic/04MyBatisDynamic.iml" />
       <module fileurl="file://$PROJECT_DIR$/05MyBatisOneToMany/05MyBatisOneToMany.iml" filepath="$PROJECT_DIR$/05MyBatisOneToMany/05MyBatisOneToMany.iml" />
       <module fileurl="file://$PROJECT_DIR$/06MyBatisManyToOne/06MyBatisManyToOne.iml" filepath="$PROJECT_DIR$/06MyBatisManyToOne/06MyBatisManyToOne.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07MyBatisOneToManyBySelf/07MyBatisOneToManyBySelf.iml" filepath="$PROJECT_DIR$/07MyBatisOneToManyBySelf/07MyBatisOneToManyBySelf.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyBatis.iml" filepath="$PROJECT_DIR$/MyBatis.iml" />
     </modules>
   </component>
