@@ -10,6 +10,7 @@
     <module>02MyBatisMapper</module>
     <module>03MyBatisMoreCondition</module>
       <module>04MyBatisDynamic</module>
+      <module>05MyBatisOneToMany</module>
   </modules>
   <packaging>pom</packaging>
 
