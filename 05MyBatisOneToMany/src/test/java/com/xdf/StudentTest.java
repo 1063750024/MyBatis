@@ -48,12 +48,18 @@ public class StudentTest {
     }
     /**
      * 根据国家的编号  查询出 国家对应省会的信息
-     * 有延迟加载
+     * 设置延迟加载
+     *01.在mybati核心配置文件中 增加setting节点
+     *02.节点中增加
+     *  <setting name="lazyLoadingEnabled" value="true"/>
+     *   <setting name="aggressiveLazyLoading" value="false"/>
      */
     @Test
     public  void selectCountryLazy(){
         Country country = dao.selectCountryById(2);
-        log.debug(country);
+        log.debug(country.getcName()); //只查询国家的名称  如果开启了延迟加载有1条sql
+        log.debug(country.getcName()); //只查询国家的名称  如果没开启了延迟加载有2条sql
+        log.debug(country.getProvincials()); //查询国家对应的省会  无论有没有开启了延迟加载都有2条sql
     }
 
 
