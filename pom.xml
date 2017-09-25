@@ -14,6 +14,7 @@
       <module>06MyBatisManyToOne</module>
       <module>07MyBatisOneToManyBySelf</module>
       <module>08MyBatisManyToOneBySelf</module>
+      <module>09MyBatisManyToMany</module>
   </modules>
   <packaging>pom</packaging>
 
