@@ -15,6 +15,7 @@
       <module>07MyBatisOneToManyBySelf</module>
       <module>08MyBatisManyToOneBySelf</module>
       <module>09MyBatisManyToMany</module>
+      <module>10MyBatisOneLevelCache</module>
   </modules>
   <packaging>pom</packaging>
 
