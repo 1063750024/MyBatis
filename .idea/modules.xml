@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/08MyBatisManyToOneBySelf/08MyBatisManyToOneBySelf.iml" filepath="$PROJECT_DIR$/08MyBatisManyToOneBySelf/08MyBatisManyToOneBySelf.iml" />
       <module fileurl="file://$PROJECT_DIR$/09MyBatisManyToMany/09MyBatisManyToMany.iml" filepath="$PROJECT_DIR$/09MyBatisManyToMany/09MyBatisManyToMany.iml" />
       <module fileurl="file://$PROJECT_DIR$/10MyBatisOneLevelCache/10MyBatisOneLevelCache.iml" filepath="$PROJECT_DIR$/10MyBatisOneLevelCache/10MyBatisOneLevelCache.iml" />
+      <module fileurl="file://$PROJECT_DIR$/11MyBatisSecondLevelCache/11MyBatisSecondLevelCache.iml" filepath="$PROJECT_DIR$/11MyBatisSecondLevelCache/11MyBatisSecondLevelCache.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyBatis.iml" filepath="$PROJECT_DIR$/MyBatis.iml" />
     </modules>
   </component>

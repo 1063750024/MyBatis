@@ -16,6 +16,7 @@
         <module name="08MyBatisManyToOneBySelf" />
         <module name="09MyBatisManyToMany" />
         <module name="10MyBatisOneLevelCache" />
+        <module name="11MyBatisSecondLevelCache" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -29,6 +30,7 @@
       <module name="08MyBatisManyToOneBySelf" target="1.5" />
       <module name="09MyBatisManyToMany" target="1.5" />
       <module name="10MyBatisOneLevelCache" target="1.5" />
+      <module name="11MyBatisSecondLevelCache" target="1.5" />
       <module name="MyBatis" target="1.5" />
     </bytecodeTargetLevel>
   </component>
